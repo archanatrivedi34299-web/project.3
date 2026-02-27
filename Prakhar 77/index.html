@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Phone Interface Launcher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="script.css" />
+</head>
+<body>
+
+<div class="phone">
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-left">📶 Wi‑Fi</div>
+    <div id="status-time"></div>
+    <div class="status-right">
+      <span id="chargingIcon" class="hidden">⚡</span>
+      🔋 <span id="battery">100%</span>
+    </div>
+  </div>
+
+  <!-- Main Clock -->
+  <div id="time"></div>
+
+  <!-- Charger Toggle -->
+  <button id="chargeToggleBtn" onclick="toggleCharging()">Toggle Charging</button>
+
+  <!-- Open Button -->
+  <div id="openArea">
+    <button onclick="showPassword()">Click to Open</button>
+  </div>
+
+  <!-- Password Area with Keypad -->
+  <div id="passwordArea" class="hidden">
+    <h2>Enter Password</h2>
+    <div id="passwordDisplay"></div>
+
+    <div class="keypad">
+      <div class="key" onclick="pressKey('1')">1</div>
+      <div class="key" onclick="pressKey('2')">2</div>
+      <div class="key" onclick="pressKey('3')">3</div>
+      <div class="key" onclick="pressKey('4')">4</div>
+      <div class="key" onclick="pressKey('5')">5</div>
+      <div class="key" onclick="pressKey('6')">6</div>
+      <div class="key" onclick="pressKey('7')">7</div>
+      <div class="key" onclick="pressKey('8')">8</div>
+      <div class="key" onclick="pressKey('9')">9</div>
+      <div class="key" onclick="clearPassword()">⌫</div>
+      <div class="key" onclick="pressKey('0')">0</div>
+      <div class="key" onclick="checkPassword()">✔️</div>
+    </div>
+
+    <div id="error" class="error"></div>
+  </div>
+
+  <!-- Apps Launcher -->
+  <div id="appsArea" class="hidden">
+    <h2 class="apps-title">Apps</h2>
+    <div class="apps-grid">
+      <div class="app" onclick="openApp('Calculator')">
+        <div class="icon">🧮</div>
+        <div class="name">Calc</div>
+      </div>
+      <div class="app" onclick="openApp('Notes')">
+        <div class="icon">📝</div>
+        <div class="name">Notes</div>
+      </div>
+      <div class="app" onclick="openApp('Browser')">
+        <div class="icon">🌐</div>
+        <div class="name">Browser</div>
+      </div>
+      <div class="app" onclick="openApp('Music')">
+        <div class="icon">🎵</div>
+        <div class="name">Music</div>
+      </div>
+      <div class="app" onclick="openApp('Camera')">
+        <div class="icon">📷</div>
+        <div class="name">Camera</div>
+      </div>
+      <div class="app" onclick="openApp('Gallery')">
+        <div class="icon">🖼️</div>
+        <div class="name">Gallery</div>
+      </div>
+      <div class="app" onclick="openApp('Settings')">
+        <div class="icon">⚙️</div>
+        <div class="name">Settings</div>
+      </div>
+      <div class="app" onclick="openApp('Clock')">
+        <div class="icon">⏰</div>
+        <div class="name">Clock</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Link to JS -->
+<script src="script.js"></script>
+</body>
+</html>
